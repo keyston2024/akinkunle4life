@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Professional web design and development portfolio showcasing creative digital solutions" />
+        <meta name="author" content="" />
+        <title>Web Design & Development Portfolio</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            /* WhatsApp Button Styles */
+            .whatsapp-float {
+                position: fixed;
+                width: 60px;
+                height: 60px;
+                bottom: 40px;
+                right: 40px;
+                background-color: #25d366;
+                color: #FFF;
+                border-radius: 50px;
+                text-align: center;
+                font-size: 30px;
+                box-shadow: 2px 2px 3px #999;
+                z-index: 100;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease;
+            }
+            .whatsapp-float:hover {
+                background-color: #128C7E;
+                color: #FFF;
+                transform: scale(1.1);
+            }
+            
+            /* Progress Bar Styles */
+            .progress {
+                height: 20px;
+                margin-bottom: 20px;
+                border-radius: 10px;
+            }
+            .progress-bar {
+                background-color: #ffc800;
+                border-radius: 10px;
+                transition: width 2s ease-in-out;
+            }
+            .skill-name {
+                margin-bottom: 5px;
+                font-weight: 600;
+            }
+            
+            /* Counter Styles */
+            .counter-box {
+                text-align: center;
+                padding: 30px 20px;
+                margin-bottom: 30px;
+                border-radius: 5px;
+                background-color: #f8f9fa;
+                transition: all 0.3s ease;
+            }
+            .counter-box:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            }
+            .counter {
+                font-size: 48px;
+                font-weight: 700;
+                color: #ffc800;
+                margin: 0 0 10px;
+                line-height: 1;
+            }
+            .counter-title {
+                font-size: 16px;
+                font-weight: 600;
+                color: #6c757d;
+            }
+            <section class="container py-5">
+    <div class="row">
+        <div class="col-md-3 col-6">
+            <div class="counter-box">
+                <div class="counter" data-target="1500">0</div>
+                <div class="counter-title">Happy Clients</div>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="counter-box">
+                <div class="counter" data-target="120">0</div>
+                <div class="counter-title">Projects Done</div>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="counter-box">
+                <div class="counter" data-target="50">0</div>
+                <div class="counter-title">Team Members</div>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="counter-box">
+                <div class="counter" data-target="10">0</div>
+                <div class="counter-title">Years of Experience</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+            /* FAQ Styles */
+            .faq-section {
+                background-color: #f8f9fa;
+                padding: 60px 0;
+            }
+            .faq-item {
+                margin-bottom: 15px;
+                border-radius: 5px;
+                overflow: hidden;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+                border: 1px solid #e9ecef;
+            }
+            .faq-question {
+                padding: 20px;
+                background-color: #fff;
+                cursor: pointer;
+                font-weight: 600;
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .faq-question .arrow {
+                transition: transform 0.3s ease;
+                margin-left: 15px;
+                flex-shrink: 0;
+            }
+            .faq-question.collapsed .arrow {
+                transform: rotate(-90deg);
+            }
+            .faq-answer {
+                padding: 0 20px;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease, padding 0.3s ease;
+                background-color: #fff;
+            }
+            .faq-question:not(.collapsed) + .faq-answer {
+                padding: 0 20px 20px;
+                max-height: 500px;
+            }
+            
+            /* Timeline Fix */
+            .timeline-body {
+                padding: 15px;
+            }
+            .timeline-body p {
+                margin-bottom: 0;
+            }
+            
+            /* Hover Effects */
+            .btn-primary {
+                transition: all 0.3s ease;
+            }
+            .btn-primary:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            }
+            .portfolio-item {
+                transition: all 0.3s ease;
+            }
+            .portfolio-item:hover {
+                transform: translateY(-5px);
+            }
+            .nav-link {
+                transition: all 0.2s ease;
+                position: relative;
+            }
+            .nav-link:hover {
+                color: #ffc800 !important;
+            }
+            .nav-link:after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background-color: #ffc800;
+                transition: width 0.3s ease;
+            }
+            .nav-link:hover:after {
+                width: 100%;
+            }
+            .testimonial-member {
+                transition: all 0.3s ease;
+            }
+            .testimonial-member:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            }
+            
+            /* Pricing Plan Styles */
+            .pricing-section {
+                padding: 80px 0;
+                background-color: #f8f9fa;
+            }
+            .pricing-card {
+                border: none;
+                border-radius: 10px;
+                transition: all 0.3s ease;
+                margin-bottom: 30px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+                overflow: hidden;
+            }
+            .pricing-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            }
+            .pricing-header {
+                background-color: #212529;
+                color: white;
+                padding: 30px 0;
+                text-align: center;
+            }
+            .pricing-title {
+                font-size: 24px;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+            .pricing-price {
+                font-size: 48px;
+                font-weight: 700;
+                margin-bottom: 0;
+            }
+            .pricing-period {
+                font-size: 16px;
+                opacity: 0.8;
+            }
+            .pricing-body {
+                padding: 30px;
+                background-color: white;
+            }
+            .pricing-features {
+                list-style: none;
+                padding: 0;
+                margin: 0 0 30px;
+            }
+            .pricing-features li {
+                padding: 10px 0;
+                border-bottom: 1px solid #eee;
+            }
+            .pricing-features li:last-child {
+                border-bottom: none;
+            }
+            .pricing-popular {
+                position: absolute;
+                top: 0;
+                right: 20px;
+                background-color: #ffc800;
+                color: #212529;
+                padding: 5px 15px;
+                font-weight: 700;
+                border-radius: 0 0 5px 5px;
+            }
+            
+            /* Star Rating Color */
+            .rating i {
+                color: #ffc800; /* Yellow/Gold color */
+            }
+        </style>
+    </head>
+    <body id="page-top">
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top">akinkunle</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#page-top">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#pricing">Pricing Plan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#project">Project</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+                <div class="masthead-subheading">Welcome To My Portfolio!</div>
+                <div class="masthead-heading text-uppercase">Let's Build Something Amazing</div>
+                <a class="btn btn-primary btn-xl text-uppercase" href="#services">Explore My Work</a>
+            </div>
+        </header>
+        
+        <!-- Services-->
+        <section class="page-section" id="services">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Services</h2>
+                    <h3 class="section-subheading text-muted">Comprehensive digital solutions tailored to your needs</h3>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-laptop-code fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Web Development</h4>
+                        <p class="text-muted">Custom websites built with clean, efficient code and modern frameworks to ensure optimal performance and scalability.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-mobile-alt fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Responsive Design</h4>
+                        <p class="text-muted">Beautiful designs that adapt seamlessly to all devices, from desktop to mobile, ensuring perfect user experience everywhere.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-search-dollar fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">SEO Optimization</h4>
+                        <p class="text-muted">Strategic optimization to improve your search rankings and drive qualified traffic to your website.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Project Grid (formerly Portfolio)-->
+        <section class="page-section bg-light" id="project">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Project</h2>
+                    <h3 class="section-subheading text-muted">A selection of my recent projects</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Project item 1-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/1.jpg" alt="E-commerce Website Project" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">E-commerce Platform</div>
+                                <div class="portfolio-caption-subheading text-muted">Web Development</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Project item 2-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/2.jpg" alt="Corporate Website Redesign" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Corporate Website</div>
+                                <div class="portfolio-caption-subheading text-muted">UI/UX Design</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Project item 3-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/3.jpg" alt="Mobile App Development" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Mobile Application</div>
+                                <div class="portfolio-caption-subheading text-muted">App Development</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                        <!-- Project item 4-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/4.jpg" alt="Brand Identity Project" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Brand Identity</div>
+                                <div class="portfolio-caption-subheading text-muted">Graphic Design</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                        <!-- Project item 5-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/5.jpg" alt="Web Application Project" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Web Application</div>
+                                <div class="portfolio-caption-subheading text-muted">Full Stack Development</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- Project item 6-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/6.jpg" alt="Digital Marketing Project" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Marketing Portal</div>
+                                <div class="portfolio-caption-subheading text-muted">Digital Marketing</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About-->
+        <section class="page-section" id="about">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">About</h2>
+                    <h3 class="section-subheading text-muted">My journey in web design and development</h3>
+                </div>
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.jpg" alt="First steps in web development" /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>2015-2017</h4>
+                                <h4 class="subheading">The Beginning</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Started my journey learning HTML, CSS, and JavaScript. Built my first websites and discovered my passion for creating digital experiences that combine functionality with aesthetic appeal.</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg" alt="First freelance project" /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>2018</h4>
+                                <h4 class="subheading">First Professional Project</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Completed my first paid project - a website for a local business. This experience solidified my decision to pursue web development professionally and helped me understand client requirements better.</p></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="Advanced skills development" /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>2019-2020</h4>
+                                <h4 class="subheading">Skill Expansion</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Mastered React, Vue.js, and Node.js while focusing on responsive design and accessibility standards.</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/4.jpg" alt="Full-time web development" /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>2021-Present</h4>
+                                <h4 class="subheading">Full-Time Development</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Transitioned to full-time web design and development, working with clients across various industries to create impactful digital solutions. My focus has been on delivering high-quality, performant websites that drive business results while maintaining clean, maintainable codebases.</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image">
+                            <h4>
+                                Be Part
+                                <br />
+                                Of My
+                                <br />
+                                Story!
+                            </h4>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Testimonials-->
+        <section class="page-section bg-light" id="testimonials">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Client Testimonials</h2>
+                    <h3 class="section-subheading text-muted">What my clients say about my work</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="testimonial-member">
+                            <img class="mx-auto rounded-circle" src="assets/img/team/1.jpg" alt="Sarah Johnson - Marketing Director" />
+                            <h4>Sarah Johnson</h4>
+                            <p class="text-muted">Marketing Director, TechCorp</p>
+                            <div class="testimonial-text">
+                                <p class="text-muted">"The website exceeded our expectations. The attention to detail and creative solutions made all the difference in our online presence."</p>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="testimonial-member">
+                            <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="Michael Chen - Startup Founder" />
+                            <h4>Michael Chen</h4>
+                            <p class="text-muted">Founder, GreenStart</p>
+                            <div class="testimonial-text">
+                                <p class="text-muted">"Incredible work on our e-commerce platform. The developer understood our vision perfectly and delivered ahead of schedule."</p>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="testimonial-member">
+                            <img class="mx-auto rounded-circle" src="assets/img/team/3.jpg" alt="Emma Rodriguez - Nonprofit Director" />
+                            <h4>Emma Rodriguez</h4>
+                            <p class="text-muted">Director, CommunityFirst</p>
+                            <div class="testimonial-text">
+                                <p class="text-muted">"Working with this developer was a pleasure. They took our outdated website and transformed it into a modern, functional masterpiece."</p>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Skills/Progress Bars -->
+        <section class="page-section" id="skills">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">My Skills</h2>
+                    <h3 class="section-subheading text-muted">Technologies I work with</h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="skill-name">HTML/CSS</div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="skill-name">JavaScript</div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="skill-name">React</div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="skill-name">Node.js</div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="skill-name">UI/UX Design</div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 88%" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="skill-name">SEO</div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Pricing Plans -->
+        <section class="pricing-section" id="pricing">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Pricing Plans</h2>
+                    <h3 class="section-subheading text-muted">Flexible options for every budget</h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card pricing-card">
+                            <div class="pricing-header">
+                                <h3 class="pricing-title">Basic</h3>
+                                <h4 class="pricing-price">$999</h4>
+                                <p class="pricing-period">one-time fee</p>
+                            </div>
+                            <div class="pricing-body">
+                                <ul class="pricing-features">
+                                    <li>5 Page Website</li>
+                                    <li>Mobile Responsive Design</li>
+                                    <li>Basic SEO Setup</li>
+                                    <li>Contact Form</li>
+                                    <li>1 Month Support</li>
+                                </ul>
+                                <a href="#contact" class="btn btn-primary btn-block">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card pricing-card">
+                            <div class="pricing-header" style="background-color: #ffc800;">
+                                <h3 class="pricing-title">Standard</h3>
+                                <h4 class="pricing-price">$2,499</h4>
+                                <p class="pricing-period">one-time fee</p>
+                            </div>
+                            <div class="pricing-body">
+                                <ul class="pricing-features">
+                                    <li>Up to 15 Pages</li>
+                                    <li>Custom Design</li>
+                                    <li>Advanced SEO</li>
+                                    <li>CMS Integration</li>
+                                    <li>3 Months Support</li>
+                                    <li>Basic E-commerce</li>
+                                </ul>
+                                <a href="#contact" class="btn btn-dark btn-block">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card pricing-card">
+                            <div class="pricing-header">
+                                <h3 class="pricing-title">Premium</h3>
+                                <h4 class="pricing-price">$4,999+</h4>
+                                <p class="pricing-period">custom project</p>
+                            </div>
+                            <div class="pricing-body">
+                                <ul class="pricing-features">
+                                    <li>Unlimited Pages</li>
+                                    <li>Custom Web Application</li>
+                                    <li>Full E-commerce Solution</li>
+                                    <li>Advanced Analytics</li>
+                                    <li>6 Months Support</li>
+                                    <li>Ongoing Maintenance</li>
+                                </ul>
+                                <a href="#contact" class="btn btn-primary btn-block">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <p class="text-muted">Need something different? <a href="#contact">Contact me</a> for custom quotes tailored to your specific requirements.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Counters -->
+        <section class="page-section bg-light" id="counters">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-3">
+                        <div class="counter-box">
+                            <div class="counter" data-target="150">0</div>
+                            <div class="counter-title">Projects Completed</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="counter-box">
+                            <div class="counter" data-target="95">0</div>
+                            <div class="counter-title">Happy Clients</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="counter-box">
+                            <div class="counter" data-target="12">0</div>
+                            <div class="counter-title">Years Experience</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="counter-box">
+                            <div class="counter" data-target="24">0</div>
+                            <div class="counter-title">Awards Won</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Frequently Asked Questions</h2>
+                    <h3 class="section-subheading text-muted">Common questions about my services</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="faq-item">
+                            <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                <span>What services do you offer?</span>
+                                <i class="fas fa-chevron-down arrow"></i>
+                            </div>
+                            <div id="faq1" class="collapse faq-answer">
+                                I offer comprehensive web design and development services including custom website development, responsive design, e-commerce solutions, SEO optimization, and ongoing maintenance. I can handle everything from simple brochure websites to complex web applications.
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                <span>How long does a typical project take?</span>
+                                <i class="fas fa-chevron-down arrow"></i>
+                            </div>
+                            <div id="faq2" class="collapse faq-answer">
+                                Project timelines vary depending on complexity. A basic website typically takes 2-4 weeks, while more complex projects can take 2-6 months. After our initial consultation, I'll provide a detailed timeline based on your specific requirements.
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                <span>What's your pricing structure?</span>
+                                <i class="fas fa-chevron-down arrow"></i>
+                            </div>
+                            <div id="faq3" class="collapse faq-answer">
+                                I offer both fixed-price projects for well-defined work and hourly rates for ongoing or flexible projects. After understanding your needs, I'll provide a transparent quote with no hidden costs. Small websites start at $1,500, with more complex projects priced accordingly.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="faq-item">
+                            <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                <span>Do you provide website maintenance?</span>
+                                <i class="fas fa-chevron-down arrow"></i>
+                            </div>
+                            <div id="faq4" class="collapse faq-answer">
+                                Yes, I offer various maintenance packages to keep your website secure, up-to-date, and performing optimally. These can include regular updates, security monitoring, backups, content updates, and performance optimization.
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                <span>What technologies do you work with?</span>
+                                <i class="fas fa-chevron-down arrow"></i>
+                            </div>
+                            <div id="faq5" class="collapse faq-answer">
+                                I work with a wide range of technologies including HTML5, CSS3, JavaScript (React, Vue, Angular), Node.js, PHP, WordPress, and various databases. I choose the best technology stack for each project based on its specific requirements.
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faq6">
+                                <span>How do we get started?</span>
+                                <i class="fas fa-chevron-down arrow"></i>
+                            </div>
+                            <div id="faq6" class="collapse faq-answer">
+                                Getting started is easy! Simply contact me through the form on this website or via WhatsApp. We'll schedule a free consultation to discuss your project, goals, and requirements. From there, I'll provide a proposal and we can begin the exciting process of bringing your vision to life.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+         <!-- Clients -->
+<div class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-3 col-sm-6 my-3">
+                <a href="#!">
+                    <img class="img-fluid img-brand" src="assets/img/logos/microsoft.svg" alt="Microsoft" aria-label="Microsoft Logo" />
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6 my-3">
+                <a href="#!">
+                    <img class="img-fluid img-brand" src="assets/img/logos/google.svg" alt="Google" aria-label="Google Logo" />
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6 my-3">
+                <a href="#!">
+                    <img class="img-fluid img-brand" src="assets/img/logos/facebook.svg" alt="Facebook" aria-label="Facebook Logo" />
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6 my-3">
+                <a href="#!">
+                    <img class="img-fluid img-brand" src="assets/img/logos/ibm.svg" alt="IBM" aria-label="IBM Logo" />
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+        
+        <!-- Contact-->
+        <section class="page-section" id="contact">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Contact Me</h2>
+                    <h3 class="section-subheading text-muted">Let's discuss your next project</h3>
+                </div>
+                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                    <div class="row align-items-stretch mb-5">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <!-- Name input-->
+                                <input class="form-control" id="name" type="text" placeholder="Your Name *" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                            </div>
+                            <div class="form-group">
+                                <!-- Email address input-->
+                                <input class="form-control" id="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" />
+                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            </div>
+                            <div class="form-group mb-md-0">
+                                <!-- Phone number input-->
+                                <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group form-group-textarea mb-md-0">
+                                <!-- Message input-->
+                                <textarea class="form-control" id="message" placeholder="Your Message *" data-sb-validations="required"></textarea>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Submit success message-->
+                    <!---->
+                    <!-- This is what your users will see when the form-->
+                    <!-- has successfully submitted-->
+                    <div class="d-none" id="submitSuccessMessage">
+                        <div class="text-center text-white mb-3">
+                            <div class="fw-bolder">Form submission successful!</div>
+                            To activate this form, sign up at
+                            <br />
+                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                        </div>
+                    </div>
+                    <!-- Submit error message-->
+                    <!---->
+                    <!-- This is what your users will see when there is-->
+                    <!-- an error submitting the form-->
+                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                    <!-- Submit Button-->
+                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Send Message</button></div>
+                </form>
+            </div>
+        </section>
+        
+        <!-- Awards Section -->
+<section class="py-5" id="awards">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-heading text-uppercase">Awards & Recognition</h2>
+            <h3 class="section-subheading text-muted">My achievements in web design and development</h3>
+        </div>
+        <div class="row g-4">
+            <!-- Award 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card award-card h-100 border-0 shadow-sm hover-animate">
+                    <div class="card-body text-center p-4">
+                        <div class="icon-rounded bg-primary-light mb-4 mx-auto">
+                            <i class="fas fa-trophy text-primary fa-2x"></i>
+                        </div>
+                        <h4 class="h5">Best Design 2023</h4>
+                        <p class="text-muted mb-3">Awards - For innovative UI/UX solutions</p>
+                        <div class="badge bg-primary-soft text-primary">Web Design</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Award 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card award-card h-100 border-0 shadow-sm hover-animate">
+                    <div class="card-body text-center p-4">
+                        <div class="icon-rounded bg-success-light mb-4 mx-auto">
+                            <i class="fas fa-medal text-success fa-2x"></i>
+                        </div>
+                        <h4 class="h5">Developer of the Year</h4>
+                        <p class="text-muted mb-3">CSS Design Awards - Excellence in coding</p>
+                        <div class="badge bg-success-soft text-success">Frontend</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Award 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card award-card h-100 border-0 shadow-sm hover-animate">
+                    <div class="card-body text-center p-4">
+                        <div class="icon-rounded bg-warning-light mb-4 mx-auto">
+                            <i class="fas fa-award text-warning fa-2x"></i>
+                        </div>
+                        <h4 class="h5">Top Portfolio 2022</h4>
+                        <p class="text-muted mb-3">FWA - For outstanding creative work</p>
+                        <div class="badge bg-warning-soft text-warning">Creative</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Award 4 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card award-card h-100 border-0 shadow-sm hover-animate">
+                    <div class="card-body text-center p-4">
+                        <div class="icon-rounded bg-info-light mb-4 mx-auto">
+                            <i class="fas fa-star text-info fa-2x"></i>
+                        </div>
+                        <h4 class="h5">Mobile Excellence</h4>
+                        <p class="text-muted mb-3">Webby Awards - Best mobile experience</p>
+                        <div class="badge bg-info-soft text-info">Mobile</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Award 5 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card award-card h-100 border-0 shadow-sm hover-animate">
+                    <div class="card-body text-center p-4">
+                        <div class="icon-rounded bg-danger-light mb-4 mx-auto">
+                            <i class="fas fa-certificate text-danger fa-2x"></i>
+                        </div>
+                        <h4 class="h5">Innovation Prize</h4>
+                        <p class="text-muted mb-3">CSS Winner - Cutting-edge solutions</p>
+                        <div class="badge bg-danger-soft text-danger">Innovation</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Award 6 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card award-card h-100 border-0 shadow-sm hover-animate">
+                    <div class="card-body text-center p-4">
+                        <div class="icon-rounded bg-purple-light mb-4 mx-auto">
+                            <i class="fas fa-lightbulb text-purple fa-2x"></i>
+                        </div>
+                        <h4 class="h5">People's Choice</h4>
+                        <p class="text-muted mb-3">Design Awards - Voted by community</p>
+                        <div class="badge bg-purple-soft text-purple">Community</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Awards Section Styles */
+.award-card {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+}
+
+.award-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
+}
+
+.icon-rounded {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Color Utilities */
+.bg-primary-light { background-color: rgba(255,200,0,0.1); }
+.bg-success-light { background-color: rgba(40,167,69,0.1); }
+.bg-warning-light { background-color: rgba(255,193,7,0.1); }
+.bg-info-light { background-color: rgba(23,162,184,0.1); }
+.bg-danger-light { background-color: rgba(220,53,69,0.1); }
+.bg-purple-light { background-color: rgba(111,66,193,0.1); }
+
+.bg-primary-soft { background-color: rgba(255,200,0,0.15); }
+.bg-success-soft { background-color: rgba(40,167,69,0.15); }
+.bg-warning-soft { background-color: rgba(255,193,7,0.15); }
+.bg-info-soft { background-color: rgba(23,162,184,0.15); }
+.bg-danger-soft { background-color: rgba(220,53,69,0.15); }
+.bg-purple-soft { background-color: rgba(111,66,193,0.15); }
+
+.text-purple { color: #6f42c1; }
+</style>
+      <!-- Footer-->
+<footer class="footer py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <!-- Footer Navigation -->
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h5 class="mb-3">Quick Links</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#page-top" class="nav-link p-0">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#about" class="nav-link p-0">About</a></li>
+                    <li class="nav-item mb-2"><a href="#services" class="nav-link p-0">Services</a></li>
+                    <li class="nav-item mb-2"><a href="#project" class="nav-link p-0">Projects</a></li>
+                    <li class="nav-item mb-2"><a href="#testimonials" class="nav-link p-0">Testimonials</a></li>
+                    <li class="nav-item mb-2"><a href="#contact" class="nav-link p-0">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h5 class="mb-3">Contact</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><i class="fas fa-envelope me-2"></i> email@example.com</li>
+                    <li class="nav-item mb-2"><i class="fas fa-phone me-2"></i> (123) 456-7890</li>
+                    <li class="nav-item mb-2"><i class="fas fa-map-marker-alt me-2"></i> City, Country</li>
+                </ul>
+            </div>
+
+            <!-- Social & Map -->
+            <div class="col-md-4">
+                <h5 class="mb-3">Connect</h5>
+                <div class="social-links mb-3">
+                    <a href="#" class="btn btn-outline-dark btn-social mx-1"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="btn btn-outline-dark btn-social mx-1"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="btn btn-outline-dark btn-social mx-1"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="btn btn-outline-dark btn-social mx-1"><i class="fab fa-instagram"></i></a>
+                </div>
+
+                <!-- Google Map Replaces Newsletter -->
+                <div class="map-responsive mb-3">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126915.65908400592!2d3.3144621!3d6.5243793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf50e45e1db0f%3A0x2c6eabf62e3d6e1a!2sLagos%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1689182890071!5m2!1sen!2sng"
+                        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <div class="policy-links mt-3">
+                    <a href="#" class="text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-decoration-none">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-4">
+
+        <!-- Centered copyright -->
+        <div class="row">
+            <div class="col-12 text-center">
+                <p class="mb-0">&copy; 2023 Web Design Portfolio. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Responsive map style -->
+<style>
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const counters = document.querySelectorAll('.counter');
+    let started = false;
+
+    function animateCounters() {
+        const triggerPoint = window.scrollY + window.innerHeight;
+
+        if (!started && document.querySelector('.counter-box') && triggerPoint > document.querySelector('.counter-box').offsetTop) {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                let count = 0;
+                const increment = Math.ceil(target / 200);
+
+                const update = () => {
+                    count += increment;
+                    if (count < target) {
+                        counter.innerText = count;
+                        setTimeout(update, 20);
+                    } else {
+                        counter.innerText = target.toLocaleString();
+                    }
+                };
+                update();
+            });
+            started = true;
+        }
+    }
+
+    window.addEventListener('scroll', animateCounters);
+});
+</script>
